@@ -1,6 +1,6 @@
-===========================================================
-All-IP Two-Factor SMS & Call Authentication (2FA)(End User)
-===========================================================
+=================================================
+All-IP Two-Factor SMS or Call Authentication (2FA)
+=================================================
 
 App Installation on Odoo:
 =========================
@@ -8,7 +8,7 @@ App Installation on Odoo:
 :menuselection:`[Odoo] --> All Apps`
 ------------------------------------
 
-- `Login to Odoo Instance <SVN/SaBRO%2520Documentation/_build/telecom/user_guide/Login_to_SaBRO.html>`__  using Admin credentials.
+- `Login to Odoo <SVN/SaBRO%2520Documentation/_build/telecom/user_guide/Login_to_SaBRO.html>`__  using Admin credentials.
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser0.jpg
    :align: center
@@ -20,7 +20,7 @@ App Installation on Odoo:
    :align: center
 
 |
--  Search for the module. Ex-Search: Authentication
+-  Search for the "All-IP Two-Factor" in the module list.
 
 -  List of authentication apps could be seen
 
@@ -28,7 +28,7 @@ App Installation on Odoo:
    :align: center 
 
 |   
--  Click on the "All-IP Two-Factor SMS & Call Authentication (2FA)" app.
+-  Click on the "All-IP Two-Factor SMS or Call Authentication (2FA)" app.
 
 -  App details will be shown
 
@@ -36,7 +36,7 @@ App Installation on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser3.jpg
    :align: center    
-
+   :width: 500px
 
 App Configuration on Odoo:
 ==========================
@@ -55,10 +55,10 @@ App Configuration on Odoo:
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser5.jpg
    :align: center 
  
-:menuselection:`Settings --> Digits Configuation --> Configuration`
+:menuselection:`Settings --> All-IP Settings --> 2FA Configuration`
 -------------------------------------------------------------------
 
--  Click on "Configuration" under Digits Configuation
+-  Click on "2FA Configuration" under All-IP Settings
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser6.jpg
    :align: center
@@ -74,12 +74,14 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser8.jpg
    :align: center
+   :width: 500px
 
 |
 -  Enter the cusumer key received on Email and Save.
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser9.jpg
    :align: center
+   :width: 500px
 
 
 :menuselection:`[User] --> Preferences --> Enable 2F Login`
@@ -101,6 +103,7 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser12.jpg
    :align: center
+   :width: 500px
 
 
 :menuselection:`[All Apps] --> Settings --> Users --> [User]`
@@ -131,6 +134,7 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser15.jpg
    :align: center   
+   :width: 500px
 
 -  NOTE: User in consideration should have mobile number present in their [All apps] -> Contacts -> [Contact] page.
 
