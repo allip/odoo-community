@@ -10,6 +10,7 @@ from odoo.addons.web.controllers.main import db_monodb, ensure_db, set_cookie_an
 from odoo import registry as registry_get
 from odoo import api, http, SUPERUSER_ID, _
 import odoo.addons.web.controllers.main as main
+import odoo
 
 class Home(main.Home):
     @http.route('/web/login', type='http', auth="none")
