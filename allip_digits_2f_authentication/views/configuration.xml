@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="digits_configuration_form_view">
+            <field name="name">digits.configuration.form</field>
+            <field name="model">digits.configuration</field>
+            <field name="arch" type="xml">
+                <form string="Configuration">
+                    <sheet>
+                        <group>
+                            <field name="digits_consumer_key"/>
+                         	 <button name="get_digits_consumer_key" string="Request Digits Consumer Key" type="object" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+          </record>
+      
+        <record model="ir.ui.view" id="digits_configuration_tree_view">
+            <field name="name">digits.configuration.form</field>
+            <field name="model">digits.configuration</field>
+            <field name="arch" type="xml">
+                <tree string="Configuration">
+    				<field name="digits_consumer_key"/>
+				</tree>
+            </field>
+          </record>      
+      
+      
+      
+        <record model="ir.actions.act_window" id="digits_configuration_action">
+            <field name="name">Configuration</field>
+            <field name="res_model">digits.configuration</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create Digits configuration
+                </p>
+            </field>
+        </record>
+
+
+			    
+
+        <menuitem id="digits_configuration_main_menu" name="All-IP Settings" parent="base.menu_administration" />
+		<menuitem name="2FA Configuration" id="digits_configuration" parent="digits_configuration_main_menu" action="digits_configuration_action"/>
+        
+     
+    </data>
+</odoo>

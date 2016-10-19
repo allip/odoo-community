@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+		 <template id="digit_confirmation_template" name="Confirm">
+		 <head>
+             <script type="text/javascript"  src="/allip_digits_2f_authentication/static/src/js/sdk.js" ></script>
+             <script src="/allip_digits_2f_authentication/static/src/js/jquery.min.js"></script>
+		</head>
+              <script>
+		
+		    $(document).ready(function () {
+	var json = null;
+	$.ajax({
+	'async': false,
+	'global': false,
+	'url': '/digit_token',
+	'dataType': "json",
+	'success': function (token) {
+    	$.each(token, function(idx, data){
+     	Digits.init({ consumerKey: data.token });
+     	console.log(data.token)
+  	
+userMobileNumber = document.getElementById("userMobileNumber").value
+callbackURL = document.getElementById("callbackURL").value
+  Digits.logIn({
+    phoneNumber: userMobileNumber,
+    callbackURL:callbackURL
+  })
+
+    });	
+	}
+	});  
+
+}); 
+          
+Digits.embed({
+  container: '.my-digits-container',
+  theme: {
+    accent: '315B7F',  
+    background: '002747',   
+    label: 'FFF',          
+    border: '324F67'     
+  }
+})
+        
+              
+              </script>
+			 <div id="my-digits-container" >
+			 </div>
+        <input type="hidden" class="form-control" id="userMobileNumber"  required="True" t-att-value="userMobileNumber"/>
+        <input type="hidden" class="form-control" id="callbackURL"  required="True" t-att-value="callbackUrl"/>
+		 </template>
+		 		 
+
+    </data>
+</odoo>
