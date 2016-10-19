@@ -1,6 +1,6 @@
-===========================================================
-All-IP Two-Factor SMS & Call Authentication (2FA)(End User)
-===========================================================
+=================================================
+All-IP Two-Factor SMS or Call Authentication (2FA)
+=================================================
 
 App Installation on Odoo:
 =========================
@@ -8,7 +8,7 @@ App Installation on Odoo:
 :menuselection:`[Odoo] --> All Apps`
 ------------------------------------
 
-- `Login to Odoo Instance <SVN/SaBRO%2520Documentation/_build/telecom/user_guide/Login_to_SaBRO.html>`__  using Admin credentials.
+- `Login to Odoo <SVN/SaBRO%2520Documentation/_build/telecom/user_guide/Login_to_SaBRO.html>`__  using Admin credentials.
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser0.jpg
    :align: center
@@ -20,7 +20,7 @@ App Installation on Odoo:
    :align: center
 
 |
--  Search for the module. Ex-Search: Authentication
+-  Search for the "All-IP Two-Factor" in the module list.
 
 -  List of authentication apps could be seen
 
@@ -28,7 +28,7 @@ App Installation on Odoo:
    :align: center 
 
 |   
--  Click on the "All-IP Two-Factor SMS & Call Authentication (2FA)" app.
+-  Click on the "All-IP Two-Factor SMS or Call Authentication (2FA)" app.
 
 -  App details will be shown
 
