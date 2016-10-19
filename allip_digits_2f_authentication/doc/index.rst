@@ -10,13 +10,13 @@ App Installation on Odoo:
 
 - `Login to Odoo Instance <SVN/SaBRO%2520Documentation/_build/telecom/user_guide/Login_to_SaBRO.html>`__  using Admin credentials.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser0.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser0.jpg
    :align: center
 
 |
 -  Click on Apps
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser1.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser1.jpg
    :align: center
 
 |
@@ -24,7 +24,7 @@ App Installation on Odoo:
 
 -  List of authentication apps could be seen
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2.jpg
    :align: center 
 
 |   
@@ -34,7 +34,7 @@ App Installation on Odoo:
 
 -  Click on Install
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser3.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser3.jpg
    :align: center    
 
 
@@ -46,13 +46,13 @@ App Configuration on Odoo:
 
 -  Once installed Click goto All Apps
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser4.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser4.jpg
    :align: center 
 
 |
 -  Click on Settings.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser5.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser5.jpg
    :align: center 
  
 :menuselection:`Settings --> Digits Configuation --> Configuration`
@@ -60,25 +60,25 @@ App Configuration on Odoo:
 
 -  Click on "Configuration" under Digits Configuation
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser6.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser6.jpg
    :align: center
 
 |
 -  Click on Create
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser7.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser7.jpg
    :align: center
 
 |
 -  Click on "Request Digits Customer Key".
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser8.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser8.jpg
    :align: center
 
 |
 -  Enter the cusumer key received on Email and Save.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser9.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser9.jpg
    :align: center
 
 
@@ -87,19 +87,19 @@ App Configuration on Odoo:
 
 -  Goto Preferences from top right user menu
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser10.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser10.jpg
    :align: center
 
 |
 -  Check "Enable 2F Login".
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser11.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser11.jpg
    :align: center
 
 |
 -  NOTE: User needs to have their mobile number present in their [All apps] -> Contacts -> [Contact] page.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser12.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser12.jpg
    :align: center
 
 
@@ -114,7 +114,7 @@ App Configuration on Odoo:
 
 -  Click on Users and select the user in consideraion.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser13.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser13.jpg
    :align: center
 
 |
@@ -123,13 +123,13 @@ App Configuration on Odoo:
 
 -  On the selected User configuration page, click on "Edit".
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser14.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser14.jpg
    :align: center
 
 |   
 -  Goto Preferences tab and check "Enable 2F Login" and Save.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser15.jpg
+.. image:: https://allip-website-resource.s3.amazonaws.com/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser15.jpg
    :align: center   
 
 -  NOTE: User in consideration should have mobile number present in their [All apps] -> Contacts -> [Contact] page.
