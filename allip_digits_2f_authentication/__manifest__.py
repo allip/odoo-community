@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "All-IP Two-Factor SMS & Call Authentication (2FA)",
-    'summary': """Two-Factor SMS & Call Authentication (2FA) Powered By Digits""",
+    'name': "All-IP Two-Factor SMS or Call Authentication (2FA)",
+    'summary': """Two-Factor SMS or Call Authentication (2FA) Powered By Digits""",
     'description': """
       Strengthen a username and password
       Use SMS or automated calling to receive dynamic codes for secure login
