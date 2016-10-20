@@ -1,16 +1,36 @@
-SMS Verification for Login Powered By Digits
----------------------------------------
+All-IP Two-Factor SMS or Call Authentication (2FA)
+--------------------------------------------------
  
-The best way to grow and verify your users
+App Installation on Odoo:
+-------------------------
  
-The Most Seamless User Onboarding Experience
----------------------------------------
-At an 85% conversion rate, features like two-factor authentication and voice verification empower your users with the most seamless verification experience using their phone numbers. 
- 
-Free Users from Attacks and Spam
-----------------------------
-With Digits, new confirmation codes are sent securely to users via SMS every time, so you never have to worry about codes being stolen or requiring users to update their password
- 
-Unlock International Growth
-------------------------
-Digits helps you unlock growth across the globe with our phone verification in 217 countries and support for 32 languages. We’re already trusted by hundreds of international brands.
+- Click on Apps
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser1.jpg "Click on Apps")
+
+- Search for the "All-IP Two-Factor" in the module list.
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2.jpg "Search for the App")
+
+- Click on the "All-IP Two-Factor SMS or Call Authentication (2FA)" app.
+- Click on Install
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser3.jpg "Click on Install")
+
+App Configuration on Odoo:
+--------------------------
+- Once installed Click goto All Apps.
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser4.jpg "goto All Apps")
+
+- Click on Settings.
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser5.jpg "Click on Settings")
+
+- Click on "2FA Configuration" under All-IP Settings
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser6.jpg "All-IP Settings -> 2FA Configuration")
+
+- Click on Create
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser7.jpg "Click on Create")
+
+- Click on "Request Digits Customer Key".
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser8.jpg "Request Digits Customer Key")
+
+- You will receivean email from us upon key generation. Enter the cusumer key received on Email and Save
+![alt tag](https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser9.jpg "Enter the cusumer key")
+
