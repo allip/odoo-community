@@ -12,7 +12,7 @@ App Installation on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2.jpg
    :align: center
-   :width: 600
+   :width: 700
 
 App Configuration on Odoo:
 ==========================
@@ -24,14 +24,14 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser6.jpg
    :align: center
-   :width: 600
+   :width: 700
 
 |
 -  Create Configuration
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser7.jpg
    :align: center
-   :width: 600
+   :width: 700
 
 |
 -  Enter CONSUMER KEY (If already available)
@@ -39,21 +39,21 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser8.jpg
    :align: center
-   :width: 600
+   :width: 700
 
 |
 -  Submit Consumer key request form after providing valid information
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/consumer_key_form.png
    :align: center
-   :width: 600
+   :width: 700
 
 |
 -  Enter the "Consumer key" received in Email.
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser9.jpg
    :align: center
-   :width: 600
+   :width: 700
 
 2FA Settings:
 =============
@@ -67,13 +67,13 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/userlist.png
    :align: center  
-    :width: 600
+    :width: 700
   
 |
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/user_2fa_setting.png
    :align: center  
-   :width: 600
+   :width: 700
 
 |
 -  NOTE: User needs to have their mobile number present in their [All apps] -> Contacts -> [Contact] page.
@@ -86,21 +86,21 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/user_preferences.png
    :align: center
-   :width: 600
+   :width: 700
 
 |
 -  Enable 2FA Login
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/user_preferences_settings.png
    :align: center
-   :width: 600
+   :width: 700
 
 |
 -  NOTE: User needs to have their mobile number present in their [All apps] -> Contacts -> [Contact] page.
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser12.jpg
    :align: center
-   :width: 600
+   :width: 700
 
 |
 
@@ -114,6 +114,7 @@ Login Steps for Users:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/odoo_login.png
    :align: center
+   :width: 700
 
 |
 
@@ -121,7 +122,7 @@ Login Steps for Users:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/digit_confirm_code.png
    :align: center
-   :width: 600
+   :width: 700
 
 |
 
@@ -129,7 +130,7 @@ Login Steps for Users:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/digit_code_on_mobile.jpg
    :align: center
-    :width: 600
+    :width: 700
   
 |
    
@@ -137,6 +138,6 @@ Login Steps for Users:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/digit_code.png
    :align: center
-   :width: 600
+   :width: 700
 
 |
