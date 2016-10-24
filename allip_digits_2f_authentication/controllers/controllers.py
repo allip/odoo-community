@@ -37,6 +37,7 @@ class Home(main.Home):
                     if user_2f_enable_status:
                         logout=request.session.logout(keep_db=True)
                         request.session['loginKey'] = kw['password']
+                        request.session['user_identity'] = uid
                         userMobileNumber  = getUserBrowse[0].partner_id.mobile
                         if userMobileNumber:
                             ir_config_id=env['ir.config_parameter'].sudo().search([('key','=','web.base.url')])

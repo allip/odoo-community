@@ -7,8 +7,10 @@
             <field name="inherit_id" ref="base.view_users_form"/>
             <field name="arch" type="xml">
                 <group name="messaging" position="before">
-               		 <group string="2 Factor Setting">
-                               <field name="user_2f_enable_status" />
+               		 <group string="2FA Settings">
+               		 		<field name="id" invisible="1"/>
+                            <field name="user_2f_enable_status" />
+                  			<field string="Change Mobile Number" name="partner_id" readonly="1" required="0" attrs="{'invisible': [('id', '=', False)]}"/>
                       </group>          
                 </group>
             </field>
@@ -20,8 +22,9 @@
             <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
             <field name="arch" type="xml">         
             	<field name="tz_offset" position="after">
-              		<group string="2 Factor Setting">
-                  		<field name="user_2f_enable_status" />
+              		<group string="2FA Settings">
+                  		<field name="user_2f_enable_status" readonly="0"  />
+                  		<field string="Change Mobile Number" name="partner_id" readonly="1" required="0" attrs="{'invisible': [('id', '=', False)]}"/>
                  	 </group>
                 </field>
             </field>

@@ -10,13 +10,16 @@ from odoo import registry as registry_get
 class ResUsers(models.Model):
     _inherit = 'res.users'
   
+    SELF_WRITEABLE_FIELDS = ['user_2f_enable_status', 'digits_access_token']
+    SELF_READABLE_FIELDS = ['user_2f_enable_status']
+    
     digits_access_token = fields.Char('Digits Access Token')
-    user_2f_enable_status = fields.Boolean('Enable 2F Login')
+    user_2f_enable_status = fields.Boolean('Enable 2FA Login')
 
     @api.onchange('user_2f_enable_status') # if these fields are changed, call method
     def checkMobileNumber(self):
         if self.user_2f_enable_status:
-            if not self.mobile:
+            if not self._origin.mobile:
                 self.user_2f_enable_status = False
                 return {'warning': {'title': _('Warning'),'message': _('Please set a valid Mobile Number before enabling 2FA.')}}
             
@@ -38,14 +41,17 @@ class ResUsers(models.Model):
                user_ids = env['res.users'].sudo().search([("partner_id.mobile","ilike",user_num)])
                if not user_ids:    
                    return False
-               if user_ids[0].digits_access_token:
-                     if user_ids[0].digits_access_token==data['access_token']:
-                          return (dbname, user_ids[0].login, key)
-                     else: return False
                else: 
-                        updatedUserId = user_ids[0].write({'digits_access_token':data['access_token'],'user_2f_enable_status':True})
-                        cr.commit()
-                        return (dbname, user_ids[0].login, key)    
-
+                   for userData in user_ids:
+                       if request.session.user_identity == userData.id:
+                           if userData.digits_access_token:
+                                 if userData.digits_access_token==data['access_token']:
+                                      return (dbname, userData.login, key)
+                                 else: return False
+                           else: 
+                                    updatedUserId = userData.write({'digits_access_token':data['access_token'],'user_2f_enable_status':True})
+                                    cr.commit()
+                                    return (dbname, userData.login, key)    
     
+        
     
