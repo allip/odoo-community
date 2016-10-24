@@ -1,101 +1,88 @@
 =================================================
-All-IP Two-Factor SMS or Call Authentication (2FA)
+All-IP Two-Factor SMS & Call Authentication (2FA)
 =================================================
 
 App Installation on Odoo:
 =========================
 
-:menuselection:`[Odoo] --> All Apps`
-------------------------------------
+:menuselection:`[Odoo] --> [All Apps]`
+--------------------------------------
 
-- `Login to Odoo <SVN/SaBRO%2520Documentation/_build/telecom/user_guide/Login_to_SaBRO.html>`__  using Admin credentials.
-
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser0.jpg
-   :align: center
-
-|
--  Click on Apps
-
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser1.jpg
-   :align: center
-
-|
--  Search for the "All-IP Two-Factor" in the module list.
-
--  List of authentication apps could be seen
+-  Search and Install "All-IP Two-Factor" module
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2.jpg
    :align: center 
 
-|   
--  Click on the "All-IP Two-Factor SMS or Call Authentication (2FA)" app.
-
--  App details will be shown
-
--  Click on Install
-
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser3.jpg
-   :align: center    
-   :width: 500px
-
 App Configuration on Odoo:
 ==========================
 
-:menuselection:`All Apps --> Settings`
---------------------------------------
+:menuselection:`[All Apps] --> Settings -->All-IP Settings`
+-----------------------------------------------------------
 
--  Once installed Click goto All Apps
-
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser4.jpg
-   :align: center 
-
-|
--  Click on Settings.
-
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser5.jpg
-   :align: center 
- 
-:menuselection:`Settings --> All-IP Settings --> 2FA Configuration`
--------------------------------------------------------------------
-
--  Click on "2FA Configuration" under All-IP Settings
+-  Go to All-IP settings
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser6.jpg
    :align: center
 
 |
--  Click on Create
+-  Create Configuration
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser7.jpg
    :align: center
 
 |
--  Click on "Request Digits Customer Key".
+-  Enter CONSUMER KEY (If already available)
+- In order to get CONSUMER KEY (API KEY), please raise a request by clicking on "Request Digits Customer Key".
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser8.jpg
    :align: center
-   :width: 500px
 
 |
--  Enter the cusumer key received on Email and Save.
+-  Submit Consumer key request form after providing valid information
+
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/consumer_key_form.png
+   :align: center
+
+|
+-  Enter the "Consumer key" received in Email.
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser9.jpg
    :align: center
-   :width: 500px
+
+2FA Settings:
+=============
+
+:menuselection:`Admin Priviledge`
+---------------------------------
+
+-  Select User from Users List
+-  Go to "Preferences" tab
+-  Enable 2FA login 
+
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/userlist.png
+   :align: center  
+   
+|
+
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/user_2fa_setting.png
+   :align: center  
+
+|
+-  NOTE: User needs to have their mobile number present in their [All apps] -> Contacts -> [Contact] page.
 
 
-:menuselection:`[User] --> Preferences --> Enable 2F Login`
------------------------------------------------------------
+:menuselection:`User Priviledge`
+--------------------------------
 
--  Goto Preferences from top right user menu
+-  Go to "Preferences" from top right user menu.
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser10.jpg
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/user_preferences.png
    :align: center
 
 |
--  Check "Enable 2F Login".
+-  Enable 2FA Login
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser11.jpg
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/user_preferences_settings.png
    :align: center
 
 |
@@ -103,38 +90,39 @@ App Configuration on Odoo:
 
 .. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser12.jpg
    :align: center
-   :width: 500px
 
+|
 
-:menuselection:`[All Apps] --> Settings --> Users --> [User]`
--------------------------------------------------------------
+Login Steps for Users:
+======================
 
--  To enable "2F Login" for other users.
+:menuselection:`Login Steps`
+----------------------------
 
--  Login to odoo instance with appropriate(admin) priviledges.
+-  Provide a valid login and password
 
--  Click on Settings under All apps.
-
--  Click on Users and select the user in consideraion.
-
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser13.jpg
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/odoo_login.png
    :align: center
 
 |
-:menuselection:`[User] --> Preferences --> Enable 2F Login`
------------------------------------------------------------
 
--  On the selected User configuration page, click on "Edit".
+-  Verify mobile number and click on "Send Confirmation Code"
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser14.jpg
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/digit_confirm_code.png
    :align: center
 
-|   
--  Goto Preferences tab and check "Enable 2F Login" and Save.
+|
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser15.jpg
-   :align: center   
-   :width: 500px
+-  User will get a Confirmation code on registered mobile number
 
--  NOTE: User in consideration should have mobile number present in their [All apps] -> Contacts -> [Contact] page.
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/digit_code_on_mobile.jpg
+   :align: center
+   
+|
+   
+-  Enter code and click continue
 
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/digit_code.png
+   :align: center
+
+|
