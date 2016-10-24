@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "All-IP Two-Factor SMS & Call Authentication (2FA)",
-    'summary': """Two-Factor SMS & Call Authentication (2FA) Powered By Digits""",
+    'name': "All-IP Two Factor SMS or Call Authentication (2FA)",
+    'summary': """Two Factor SMS or Call Authentication (2FA) Powered By Digits""",
     'description': """
       Strengthen a username and password
       Use SMS or automated calling to receive dynamic codes for secure login
@@ -11,7 +11,7 @@
     'category': 'Extra Tools',
     'license': 'LGPL-3',
     'images': ['static/description/Two-Factor-Authenticaton.png'],
-    'version': '0.1',
+    'version': '1.0',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
