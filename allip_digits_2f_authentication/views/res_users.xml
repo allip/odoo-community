@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="digits_2f_user_form_view" model="ir.ui.view">
+            <field name="name">User Preference</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <group name="messaging" position="before">
+               		 <group string="2FA Setting">
+               		 		<field name="id" invisible="1"/>
+                            <field name="user_2f_enable_status" />
+                  			<field string="Change Mobile Number" name="partner_id" readonly="1" required="0" attrs="{'invisible': [('id', '=', False)]}"/>
+                      </group>          
+                </group>
+            </field>
+        </record>
+        
+     <record id="digits_2f_user_form_simple_modif" model="ir.ui.view">
+            <field name="name">User Preference</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">         
+            	<field name="signature" position="after">
+              		<group string="2FA Setting">
+              			<field name="id" invisible="1"/>
+                  		<field name="user_2f_enable_status" readonly="0" />
+                  		<field string="Change Mobile Number" name="partner_id" readonly="1" required="0" attrs="{'invisible': [('id', '=', False)]}"/>
+                 	 </group>
+                </field>
+            </field>
+        </record>
+        
+       
+    </data>
+</openerp>
