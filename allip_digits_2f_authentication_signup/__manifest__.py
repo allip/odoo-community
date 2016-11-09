@@ -12,7 +12,7 @@
     'license': 'LGPL-3',
     'images': ['static/description/Two-Factor-Authenticaton.png'],
     'version': '1.0',
-    'depends': ['base','web','allip_digits_2f_authentication','auth_signup'],
+    'depends': ['base','web','allip_base','allip_digits_2f_authentication','auth_signup'],
     'data': ['views/template.xml',],
    
 }
