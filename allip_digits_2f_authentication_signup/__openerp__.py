@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "All-IP Two Factor SMS or Call Validation (2FA) for Signup",
+    'name': "All-IP Signup Two Factor Validation by SMS or Call (2FA)",
     'summary': """Two Factor SMS or Call Validation (2FA) for Signup Powered By Digits""",
     'description': """
       Stop Unwanted Signup and Spammers
