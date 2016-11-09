@@ -11,7 +11,6 @@ class ResUsers(models.Model):
     _inherit = 'res.users'
 
     SELF_WRITEABLE_FIELDS = ['user_2f_enable_status', 'digits_access_token']
-    SELF_READABLE_FIELDS = ['user_2f_enable_status']
 
     digits_access_token = fields.Char('Digits Access Token')
     user_2f_enable_status = fields.Boolean('Enable 2FA Login')

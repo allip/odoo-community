@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	<template id="sign_up" inherit_id="auth_signup.fields" name="sign_up">
+    		
+	        <xpath expr="//div[@class='form-group field-confirm_password']" position="after">
+	        	 <head>
+				    <link href="/allip_digits_2f_authentication_signup/static/css/flags.authy.css" media="screen" rel="stylesheet" type="text/css"/>
+				    <link href="/allip_digits_2f_authentication_signup/static/src/css/form.authy.css" media="screen" rel="stylesheet" type="text/css"/>
+					<script src="/allip_digits_2f_authentication_signup/static/src/js/form.min.js" type="text/javascript"></script>
+				  </head>
+				  <div class="col-xs-12" style="padding-left:0px; padding-right:0px;">
+				  <div class="col-xs-3" style="padding-left:0px;">
+                	<label for="country_code" class="control-label">Country Code</label><br/>
+                	<select id="authy-countries" name="country_code" class="form-control" data-show-as="number"></select>
+                	<br/>
+                	</div>
+                	<div class="col-xs-9" style="padding-right:0px;">
+	                <label for="mobile_number" class="control-label">Mobile Number</label>
+	                <input type="number" name="mobile_number" id="mobile_number" class="form-control" required="required" min="1000000000" max="9999999999"/>
+	                <br/>
+	                </div>
+	                </div>
+            </xpath>
+            
+   		 </template>
+    </data>
+</odoo>
