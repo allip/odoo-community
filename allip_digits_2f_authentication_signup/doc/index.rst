@@ -10,7 +10,7 @@ App Installation on Odoo:
 
 -  Search and Install "All-IP Two-Factor" module
 
-.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2_signup..jpg
+.. image:: https://web-resource.allip.io/github/allip_digits_2f_authentication/media/DigitsAuthenticationEndUser2_signup.jpg
    :align: center
    :width: 700
 
