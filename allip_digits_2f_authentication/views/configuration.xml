@@ -5,7 +5,7 @@
             <field name="name">digits.configuration.form</field>
             <field name="model">digits.configuration</field>
             <field name="arch" type="xml">
-                <form string="Configuration">
+                <form string="Configuration" create="false" >
                     <sheet>
                         <group>
                             <field name="digits_consumer_key"/>
@@ -15,35 +15,32 @@
                 </form>
             </field>
           </record>
-      
-        <record model="ir.ui.view" id="digits_configuration_tree_view">
-            <field name="name">digits.configuration.form</field>
-            <field name="model">digits.configuration</field>
-            <field name="arch" type="xml">
-                <tree string="Configuration">
-    				<field name="digits_consumer_key"/>
-				</tree>
-            </field>
-          </record>      
-      
-      
-      
-        <record model="ir.actions.act_window" id="digits_configuration_action">
+
+        <record id="digits_configuration_action" model="ir.actions.server">
             <field name="name">Configuration</field>
-            <field name="res_model">digits.configuration</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">Create Digits configuration
-                </p>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_digits_configuration" /> 
+            <field name="code">
+configIdObj = env['digits.configuration'].search([]) 
+if configIdObj:
+	action = {
+               	 		"type": "ir.actions.act_window",
+             	   		"view_mode": "form",
+             	   		"res_model": "digits.configuration",
+             	   		"res_id": configIdObj[0].id,
+           		 	}
+else:
+					action = {
+               	 		"type": "ir.actions.act_window",
+             	   		"view_mode": "form",
+             	   		"res_model": "digits.configuration",
+           		 }
+           		 		
             </field>
-        </record>
+        </record> 
 
-
-			    
-
-        <menuitem id="digits_configuration_main_menu" name="All-IP Settings" parent="base.menu_administration" />
-		<menuitem name="2FA Configuration" id="digits_configuration" parent="digits_configuration_main_menu" action="digits_configuration_action"/>
+		<menuitem name="2FA Configuration" id="digits_configuration" parent="allip_base.allip_main_menu" action="digits_configuration_action"/>
         
      
     </data>

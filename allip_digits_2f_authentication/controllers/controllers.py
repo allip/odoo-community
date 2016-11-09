@@ -32,20 +32,22 @@ class Home(main.Home):
             if uid is not False:
                 with registry_get(request.session.db).cursor() as cr:
                     env = api.Environment(cr, SUPERUSER_ID, {})
-                    getUserBrowse = env['res.users'].sudo().browse(uid)
-                    user_2f_enable_status = getUserBrowse[0].user_2f_enable_status
-                    if user_2f_enable_status:
-                        logout=request.session.logout(keep_db=True)
-                        request.session['loginKey'] = kw['password']
-                        request.session['user_identity'] = uid
-                        userMobileNumber  = getUserBrowse[0].partner_id.mobile
-                        if userMobileNumber:
-                            ir_config_id=env['ir.config_parameter'].sudo().search([('key','=','web.base.url')])
-                            base_url=env['ir.config_parameter'].sudo().browse(int(ir_config_id))[0].value
-                            return http.request.render('allip_digits_2f_authentication.digit_confirmation_template',{'userMobileNumber':userMobileNumber,'callbackUrl' : base_url+'/verify/login'})
-                        else:
-                            values['error'] = _("You may have enabled two factor authentication using mobile number, but your mobile number is not setup under your profile. Please contact your Administrator!")
-                            return request.render('web.login', values)                    
+                    getDigitsConfigSearch=http.request.env['digits.configuration'].search([])
+                    if getDigitsConfigSearch:
+                        getUserBrowse = env['res.users'].sudo().browse(uid)
+                        user_2f_enable_status = getUserBrowse[0].user_2f_enable_status
+                        if user_2f_enable_status:
+                            logout=request.session.logout(keep_db=True)
+                            request.session['loginKey'] = kw['password']
+                            request.session['user_identity'] = uid
+                            userMobileNumber  = getUserBrowse[0].partner_id.mobile
+                            if userMobileNumber:
+                                ir_config_id=env['ir.config_parameter'].sudo().search([('key','=','web.base.url')])
+                                base_url=env['ir.config_parameter'].sudo().browse(int(ir_config_id))[0].value
+                                return http.request.render('allip_digits_2f_authentication.digit_confirmation_template',{'userMobileNumber':userMobileNumber,'callbackUrl' : base_url+'/verify/login'})
+                            else:
+                                values['error'] = _("You may have enabled two factor authentication using mobile number, but your mobile number is not setup under your profile. Please contact your Administrator!")
+                                return request.render('web.login', values)                    
                 request.params['login_success'] = True
                 if not redirect:
                     redirect = '/web'
@@ -57,12 +59,15 @@ class Home(main.Home):
     @http.route('/digit_token', auth="public")
     def get_digit_token(self,**kw):
            getDigitsConfigSearch=http.request.env['digits.configuration'].search([])
-           dataInArray=[]
-           dataInArray.append({'token':getDigitsConfigSearch[0].digits_consumer_key })
-           return simplejson.dumps(dataInArray)
+           if getDigitsConfigSearch:
+               dataInArray=[]
+               dataInArray.append({'token':getDigitsConfigSearch[0].digits_consumer_key })
+               return simplejson.dumps(dataInArray)
+           else:
+               return False
 
     @http.route('/verify/login', auth="public")
-    def web_digits_verify(self,*args,**kw):
+    def web_digits_verify_login(self,*args,**kw):
         if 'X-Verify-Credentials-Authorization' in kw:
            digitResponse = kw['X-Verify-Credentials-Authorization']
            getDigitsConfigSearch=http.request.env['digits.configuration'].search([])
@@ -78,4 +83,24 @@ class Home(main.Home):
                            return werkzeug.utils.redirect('/web/login')
                else:
                    return werkzeug.utils.redirect('/web/login')
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
 

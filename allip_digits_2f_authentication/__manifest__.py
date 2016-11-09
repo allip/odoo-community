@@ -11,7 +11,7 @@
     'category': 'Extra Tools',
     'license': 'LGPL-3',
     'images': ['static/description/Two-Factor-Authenticaton.png'],
-    'version': '1.0',
+    'version': '1.1',
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',

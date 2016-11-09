@@ -23,6 +23,7 @@
             <field name="arch" type="xml">         
             	<field name="tz_offset" position="after">
               		<group string="2FA Settings">
+               		 	<field name="id" invisible="1"/>
                   		<field name="user_2f_enable_status" readonly="0"  />
                   		<field string="Change Mobile Number" name="partner_id" readonly="1" required="0" attrs="{'invisible': [('id', '=', False)]}"/>
                  	 </group>

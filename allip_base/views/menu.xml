@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="allip_main_menu" name="All-IP Settings" parent="base.menu_administration" />
+    </data>
+</odoo>
