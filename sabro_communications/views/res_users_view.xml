@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="sabro_res_users_view_form">
+            <field name="name">SaBRO Services</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+             	<xpath expr="/form/sheet/notebook/page[@name='access_rights']" position="after">
+            		<page name="sabro_preferences" string="SaBRO Services">
+ 						<group string="SaBRO Access">
+					  		<field name="sabro_enabled" attrs="{}" />
+						  	<field name="sabro_user_remapped" attrs="{'invisible': ['|', ('sabro_enabled', '=', False),('sabro_user', '!=', False)]}" />
+						  	<field name="sabro_user" options="{'no_quick_create': True, 'no_create_edit' : True, 'no_create': True, 'no_open': False}" attrs="{'readonly': [('sabro_user_remapped', '=', False)], 'invisible': ['|', '&#38;', ('sabro_user_remapped', '=', False),('sabro_user', '=', False),('sabro_enabled', '=', False)]}" />
+						  	<!-- <field name="sabro_login" widget="html" nolabel="1" attrs="{'invisible': [('sabro_login', 'in', [False, None, ''])]}" /> -->
+						  	<field name="sabro_admin_login" widget="html" nolabel="1" groups="base.group_system" attrs="{'invisible': [('sabro_admin_login', 'in', [False, None, ''])]}" />
+         				</group>                   
+                   	</page>
+                </xpath>
+            </field>
+        </record> 
+        <record model="ir.ui.view" id="sabro_view_users_form_simple_modif">
+            <field name="name">SaBRO Services</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+            <field name="arch" type="xml">
+				<button name="preference_change_password" position="after">
+				  	<field name="sabro_login" widget="html" nolabel="1" attrs="{'invisible': [('sabro_login', 'in', [False, None, ''])]}" />
+      			</button>                   
+            </field>
+        </record> 
+    </data>
+</odoo>
+<!-- base.group_system -->

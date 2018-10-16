@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sabro_cloudsoftphone_default_configuration" model="cloudsoftphone_configuration">
+            <field name="cloud_id">SaBRO</field>
+        </record>
+    </data>
+</odoo>
+        

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+	<t t-name="communications-hub-dailer-TopButton">
+	    <li class="communication-hub communication-hub-toggle" t-att-title='_t("Communications Hub")'>
+			<style>
+				a.btn.btn-sm:hover{
+				color: #333;
+				background-color: #eee;
+				}
+			</style>        
+			<a class="dropdown-toggle communication-hub communication-hub-toggle" aria-expanded="false" title="Communications Hub" target="_blank" href="/sabro_communications/static/hub/index.html">
+				<div>
+					<img class="communications-hub communication-hub-toggle" style="width:20px;height:20px;cursor: pointer;" src="/sabro_communications/static/src/img/Call_Connect.png" />
+				</div>
+			</a>
+		</li>
+	</t>
+</templates>
