@@ -6,7 +6,7 @@
         SaBRO Communications
     """,
     'author': "All-IP Cloud",
-    'website': "https://www.allip.co.uk",
+    'website': "https://www.allipcloud.com",
     'category': 'Communication',
     'license': 'LGPL-3',
     'version': '1.0',
