@@ -1,26 +1,20 @@
 # -*- coding: utf-8 -*-
 {
     'name': "SaBRO Communications",
-
     'summary': """SaBRO Communications""",
-
     'description': """
         SaBRO Communications
     """,
-
     'author': "All-IP Cloud",
     'website': "https://www.allip.co.uk",
-
     'category': 'Communication',
+    'license': 'LGPL-3',
     'version': '1.0',
     'application': True,
     'sequence': 1,
-
+    'images': ['static/description/icon.png'],
     'external_dependencies': {'python' : ['odoorpc'],},
-    # any module necessary for this one to work correctly
     'depends': ['base'],
-
-    # always loaded
     'data': [
          'security/ir.model.access.csv',
          'data/ir_cron.xml',
