@@ -245,7 +245,7 @@ else:
 		                    <field name="name" required="1" placeholder="Enter Company Name"/>
 		                    <field name="admin_name" required="1" placeholder="Enter SaBRO Administrator's Name" />
 		                    <field name="node_api_username" required="1" placeholder="something@example.com" />
-		                    <field name="country_id" required="1"/>
+		                    <field name="country_id" required="1" options="{'no_quick_create': True, 'no_create_edit' : True, 'no_create': True, 'no_open': True}"/>
 		                    <field name="mobile" required="1" placeholder="+44****** format only" attrs="{'invisible': [('country_id', '=', False)]}" />
 		                    <field name="sub_domain" required="1" string="Sub Domain" placeholder="Enter only small letters, digits and hyphens" attrs="{'invisible': [('country_id', '=', False)]}" />
 		                    <button class="btn btn-primary" style="width:100%;" name="%(sabro_communications.view_sabro_installer_verification_action)d" string="Verify OTP" type="action" attrs="{'invisible': [('otp_pending', '!=', True)]}"/>

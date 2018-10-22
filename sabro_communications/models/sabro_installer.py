@@ -188,6 +188,11 @@ class SabroInstallerVerification(models.Model):
                                           "sabro_customer_id": res['customer_ref_id'],
                                         })
             vals['setup_complete'] = True
+            setupMenu = self.env['ir.ui.menu'].sudo().search([('name', '=', 'SaBRO Setup')])
+            if setupMenu:
+                veriftOtpAction = self.env['ir.actions.server'].sudo().search([('name', '=', 'SaBRO Installation Verification')])
+                if veriftOtpAction:
+                    setupMenu[0].action = str('ir.actions.server,')+str(veriftOtpAction[0].id)
         return super(SabroInstallerVerification, self).create(vals)
     
     def callAgainForOTP(self):
