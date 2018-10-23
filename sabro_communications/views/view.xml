@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+        <template id="sabro_communications_hub_assets_backend" name="sabro_communications_hub_assets_backend" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+           		 <script type="text/javascript" src="/sabro_communications/static/src/js/sabro_communications_hub.js"></script>       
+            </xpath>
+        </template>
+    
+    
+ 	    <menuitem name="SaBRO"
+	        id="menu_administration_sabro"
+	        sequence="2"
+	        groups="base.group_system"
+	        parent="base.menu_administration"
+	    />
+
+        <!-- sabro_installer_verification -->
+        <record model="ir.ui.view" id="view_sabro_installer_verification_form">
+            <field name="name">SaBRO Installation Verification</field>
+            <field name="model">sabro_installer_verification</field>
+            <field name="arch" type="xml">
+                <form string="SaBRO Installation Verification"  edit="0" create="0" delete="0">
+                    <sheet>
+                    	<div class="oe_button_box" name="button_box">
+                        	<label for="call_again_button" class="btn btn-sm btn-primary call_again_button" attrs="{'invisible': [('setup_complete', '=', True)]}"/>
+                    	</div>
+                        <group>
+                            <group>
+			                    <field name="otp" placeholder="Enter OTP" attrs="{'invisible': [('setup_complete', '=', True)]}"/>
+			                    <field name="setup_complete" invisible="1"/>
+								<field name="call_again_button" invisible="1"/>
+			                    <button class="btn btn-primary" style="width:100%;" name="finish_setup" string="Finish" type="object" attrs="{'invisible': [('setup_complete', '=', False)]}"/>
+			                    <script>
+			                    		function disableBtn(){
+			                    			$( '.call_again_button' ).attr('disabled', '1');
+			                    			var otp_input_single_sms_count= 31
+			                    			var buttonTimer= setInterval(
+												function()
+												{ 
+													otp_input_single_sms_count--;
+													$( '.call_again_button' ).html( "Call Again" + " ( "+otp_input_single_sms_count +" )");
+												}, 1000);
+			                    			setTimeout(function(){ $( '.call_again_button' ).removeAttr('disabled'); $( '.call_again_button' ).html( "Call Again" ); clearInterval(buttonTimer); }, 30000);
+			                    		}
+			                    		disableBtn()
+			                    		$('.call_again_button').off().on('click', function(){
+				                    		$("input[name='call_again_button']").each( function(){
+				                    			$(this).click();
+				                    			disableBtn()
+											});
+										});
+			                    </script>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_sabro_installer_verification_action" model="ir.actions.server">
+            <field name="name">SaBRO Installation Verification</field>
+            <field name="model_id" ref="model_sabro_installer_verification"/>
+            <field name="state">code</field>
+            <field name="code">action = model.view_installation_verification_form()</field>
+        </record>
+
+
+        <!-- sabro_auth -->
+        <record id="view_sabro_auth_tree" model="ir.ui.view">
+            <field name="name">sabro_auth.tree</field>
+            <field name="model">sabro_auth</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="SaBRO Configuration" create="1" delete="0">
+                    <field name="name" />
+                    <field name="node_web_url"/>
+                    <field name="node_host"/>
+                    <field name="protocol"/>
+                    <field name="port"/>
+                    <field name="timeout"/>
+                    <field name="login"/>
+                    <field name="centrex_sip_registration_url"/>
+                    <field name="sabro_customer_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_sabro_auth_form" model="ir.ui.view">
+            <field name="name">sabro_auth.form</field>
+            <field name="model">sabro_auth</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="SaBRO Configuration" create="1" delete="0">
+                <sheet>
+                    <group string="Configuration">
+	                    <field name="name" />
+	                    <field name="node_web_url"/>
+	                    <field name="node_host"/>
+	                    <field name="protocol"/>
+	                    <field name="port"/>
+	                    <field name="timeout"/>
+	                    <field name="login"/>
+	                    <field name="password" password="True"/>
+	                    <field name="centrex_sip_registration_url"/>
+	                    <field name="sabro_customer_id"/>
+                    </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+	    <record id="action_sabro_auth_configuration" model="ir.actions.act_window">
+	        <field name="name">SaBRO Configuration</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">sabro_auth</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="help" type="html">
+	          <p class="oe_view_nocontent_create">
+	            Click to add a configuration.
+	          </p>
+	        </field>
+	    </record>
+
+	    <menuitem name="SaBRO Configuration"
+	        id="menu_administration_sabro_auth_configuration"
+	        sequence="99"
+	        action="action_sabro_auth_configuration"
+	        groups="base.group_system"
+	        parent="menu_administration_sabro"
+	    />
+	    
+        <!-- sabro_users -->
+        <record id="view_sabro_users_tree" model="ir.ui.view">
+            <field name="name">sabro_users.tree</field>
+            <field name="model">sabro_users</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="SaBRO Users" create="0" delete="0">
+                    <field name="name" />
+                    <field name="node_user_name" />
+                    <field name="node_user_id" />
+                    <field name="node_user_extension" />
+                    <field name="access_level" />
+                </tree>
+            </field>
+        </record>
+        <record id="view_sabro_users_form" model="ir.ui.view">
+            <field name="name">sabro_users.form</field>
+            <field name="model">sabro_users</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="SaBRO Users" create="0" delete="0">
+                <sheet>
+                    <group string="Configuration">
+                    <field name="name" />
+                    <field name="node_user_name" readonly="1" />
+                    <field name="node_user_id" readonly="1" />
+                    <field name="node_user_extension" readonly="1" />
+                    <field name="access_level" readonly="0" groups="base.group_system"/>
+                    <field name="odoo_auth_key" readonly="0" password="True" />
+                    </group>
+                </sheet>
+                </form>
+            </field>
+        </record>
+	    <record id="action_sabro_users_configuration" model="ir.actions.act_window">
+	        <field name="name">SaBRO Users</field>
+	        <field name="type">ir.actions.act_window</field>
+	        <field name="res_model">sabro_users</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">tree,form</field>
+	        <field name="help" type="html">
+	          <p class="oe_view_nocontent_create">
+	            Click to add a user.
+	          </p>
+	        </field>
+	    </record>
+
+	    <menuitem name="SaBRO Users"
+	        id="menu_administration_sabro_users_configuration"
+	        sequence="1"
+	        action="action_sabro_users_configuration"
+	        groups="base.group_no_one"
+	        parent="menu_administration_sabro"
+	    />
+
+
+
+
+
+
+
+
+
+
+
+
+
+    	<!-- <record model="ir.ui.view" id="view_sabro_installer_form">
+            <field name="name">NODEs</field>
+            <field name="model">sabro_installer</field>
+            <field name="arch" type="xml">
+                <tree string="" create="1" edit="0">
+                    <field name="name"/>
+                    <field name="node_api_username" string="Email"/>
+                    <field name="mobile" />
+                    <field name="phone" />
+                    <field name="core_partner_id" />
+                    <field name="core_create_date" />
+                    <field name="is_prepaid" />
+                    <field name="is_suspended" />
+                    <field name="node_url" />
+                </tree>
+            </field>
+        </record> -->
+
+        <record model="ir.ui.view" id="view_sabro_installer_form">
+            <field name="name">SaBRO Installer</field>
+            <field name="model">sabro_installer</field>
+            <field name="arch" type="xml">
+                <form string="SaBRO Installation Wizard"  edit="1" create="0" delete="0">
+                    <sheet>
+						<group string="">
+                           	<span attrs="{'invisible': [('otp_pending', '=', True)]}">Provide Details for SaBRO Setup</span><br />
+                           	<span attrs="{'invisible': [('otp_pending', '!=', True)]}">SaBRO Details</span><br />
+		                    <field name="otp_pending" invisible="1"/>
+		                    <field name="name" required="1" placeholder="Enter Company Name"/>
+		                    <field name="admin_name" required="1" placeholder="Enter SaBRO Administrator's Name" />
+		                    <field name="node_api_username" required="1" placeholder="something@example.com" />
+		                    <field name="country_id" required="1" options="{'no_quick_create': True, 'no_create_edit' : True, 'no_create': True, 'no_open': True}"/>
+		                    <field name="mobile" required="1" placeholder="+44****** format only" attrs="{'invisible': [('country_id', '=', False)]}" />
+		                    <field name="sub_domain" required="1" string="Sub Domain" placeholder="Enter only small letters, digits and hyphens" attrs="{'invisible': [('country_id', '=', False)]}" />
+		                    <button class="btn btn-primary" style="width:100%;" name="%(sabro_communications.view_sabro_installer_verification_action)d" string="Verify OTP" type="action" attrs="{'invisible': [('otp_pending', '!=', True)]}"/>
+						</group>
+                        <group>
+			                <span attrs="{'invisible': [('country_id', '=', False)]}" ><i>We will provision a SaBRO instance for you at <b>[Sub Domain].allipcloud.com</b></i></span>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="view_sabro_installer_action" model="ir.actions.server">
+            <field name="name">SaBRO Installer</field>
+            <field name="model_id" ref="model_sabro_installer"/>
+            <field name="state">code</field>
+            <field name="code">action = model.view_installer_form()</field>
+        </record>
+        
+    
+    
+<!--         <record id="view_sabro_installer_action" model="ir.actions.server">
+            <field name="name">SaBRO Installer</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_sabro_installer" />
+            <field name="binding_model_id" ref="model_sabro_installer"/>
+            <field name="state">code</field>
+            <field name="code">
+if records:
+	installerObj = env['sabro_installer'].search([])
+	if installerObj:
+	        action = {
+	                                "type": "ir.actions.act_window",
+	                                "view_mode": "form",
+	                                "res_model": "sabro_installer",
+	                                "res_id": installerObj[0].id,
+	                                }
+	else:
+	        action = {
+	                                "type": "ir.actions.act_window",
+	                                "view_mode": "form",
+	                                "res_model": "sabro_installer",
+	                         		}
+            </field>
+        </record> -->
+        
+<!--         <record id="sabro_installer" model="ir.actions.server">
+        <field name="name">Signup</field>
+        <field name="model_id" ref="model_sabro_installer"/>
+        <field name="state">code</field>
+        <field name="code">
+			action = {
+			    'type': 'ir.actions.act_url',
+			    'url': '/web?reload#action=sabro_communications.view_sabro_installer_action', # the ?reload option is there to fool the webclient into thinking it is a different location and so to force a reload
+			    'target': 'self',
+			}
+        </field>
+    </record> -->
+
+
+    	<record id="sabro_installer" model="ir.actions.todo">
+		    <field name="action_id" ref="view_sabro_installer_action"/>
+		    <field name="type">automatic</field>
+		    <field name="state">open</field>
+		</record>
+		
+		<menuitem name="SaBRO Setup"
+	        id="menu_sabro_installation_wizard"
+	        sequence="1"
+	        groups="base.group_system"
+	        parent="base.menu_management"
+	        action="view_sabro_installer_action"
+	    />
+	    
+	    <menuitem id="menu_orders" name="Orders"
+        parent="website.menu_website_configuration" sequence="2"
+        groups="sales_team.group_sale_salesman"/>
+		
+	</data>
+</odoo>

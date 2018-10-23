@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+		<data>
+			<record forcecreate="True" id="get_sabro_users_CRON" model="ir.cron">
+	            <field name="name">Update SaBRO Users</field>
+	            <field name="model_id" ref="model_sabro_users"/>
+	            <field name="state">code</field>
+	            <field name="code">model.getSabroUsers()</field>
+	            <field eval="True" name="active" />
+	            <field name="user_id" ref="base.user_root" />
+	            <field name="interval_number">1</field>
+	            <field name="interval_type">days</field>
+	            <field name="numbercall">-1</field>
+	            <field eval="True" name="doall" />
+	        </record>
+	  </data>
+</odoo>
