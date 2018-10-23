@@ -1,5 +1,4 @@
-﻿
-Step1
+﻿Step1
 
 menuselection:`[Odoo] --> [All Apps]`
 
