@@ -5,14 +5,14 @@
     'description': """
         SaBRO Communications
     """,
-    'author': "All-IP Cloud",
+    'author': "ALL IP LTD",
     'website': "https://www.allipcloud.com",
     'category': 'Communication',
     'license': 'LGPL-3',
     'version': '1.0',
     'application': True,
     'sequence': 1,
-    'images': ['static/description/icon.png'],
+    'images': ['static/src/img/sabroCommunications.png'],
     'external_dependencies': {'python' : ['odoorpc'],},
     'depends': ['base'],
     'data': [
