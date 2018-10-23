@@ -25,7 +25,7 @@ Step2
 
 	5. Mobile/Phone Number (For Verification)
 
-	6. ub-domain (URL for SaBRO Node)
+	6. Sub-domain (URL for SaBRO Node)
 
 - Click on "Save" button after providing valid information
 
