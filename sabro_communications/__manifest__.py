@@ -5,7 +5,7 @@
     'description': """
         SaBRO Communications
     """,
-    'author': "All-IP Cloud",
+    'author': "ALL IP LTD",
     'website': "https://www.allipcloud.com",
     'category': 'Communication',
     'license': 'LGPL-3',

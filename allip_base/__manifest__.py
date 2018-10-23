@@ -5,7 +5,7 @@
     'description': """
       All-IP Base Configuration Module required for All-IP Modules
       """,
-    'author': "All-IP Cloud",
+    'author': "ALL IP LTD",
     'website': "https://www.allipcloud.com",
     'category': 'Extra Tools',
     'license': 'LGPL-3',

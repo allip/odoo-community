@@ -6,7 +6,7 @@
       Stop Unwanted Signup and Spammers
       Use SMS or automated calling to validate user's identity during signup
       """,
-    'author': "All-IP Cloud",
+    'author': "ALL IP LTD",
     'website': "https://www.allipcloud.com",
     'category': 'Extra Tools',
     'license': 'LGPL-3',

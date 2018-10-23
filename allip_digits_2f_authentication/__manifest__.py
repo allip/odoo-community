@@ -6,7 +6,7 @@
       Strengthen a username and password
       Use SMS or automated calling to receive dynamic codes for secure login
       """,
-    'author': "All-IP Cloud",
+    'author': "ALL IP LTD",
     'website': "https://www.allipcloud.com",
     'category': 'Extra Tools',
     'license': 'LGPL-3',
