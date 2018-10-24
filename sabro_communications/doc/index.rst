@@ -1,12 +1,11 @@
-﻿
-Step1
+﻿Step1
 
 menuselection:`[Odoo] --> [All Apps]`
 
 - Search and Install "SaBRO Communications" module
 - Click on install to get started with SaBRO Communications
 
-.. image:: /sabro_communications/static/src/img/install.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/install.png
    :align: center
    :width: 700
 
@@ -29,13 +28,13 @@ Step2
 
 - Click on "Save" button after providing valid information
 
-.. image:: /sabro_communications/static/src/img/provideDetails.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/enterDetails.png
    :align: center
    :width: 700
    
 Note: 
 
-1. Installing SaBRO will create new sub-menu as “SaBRO Setup”. 
+1. Installing SaBRO will create new sub-menu as "SaBRO Setup". 
 2. SaBRO setup is required to enable the communications features. 
 
 
@@ -44,7 +43,7 @@ Step3
 - Click on Verify OTP button to initiate the verification process. 
 - SaBRO Cloud will place a call on entered mobile number with 6-digit one time password (OTP).
 
-.. image:: /sabro_communications/static/src/img/otp.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/verifyOtp.png
    :align: center
    :width: 700
 
@@ -52,10 +51,10 @@ Note: Review all the filled information's before verifying the Mobile/Phone numb
 
 Step4
 
-- Enter the one time password received on provided mobile via call and click on “SAVE” button.
-- In case, you do not receive any call or missed the call, you can request new OTP by clicking on “Call Again”.
+- Enter the one time password received on provided mobile via call and click on "Call Again" button.
+- In case, you do not receive any call or missed the call, you can request new OTP by clicking on "Call Again".
 
-.. image:: /sabro_communications/static/src/img/enterCode.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/enterOtp.png
    :align: center
    :width: 700
 
@@ -63,22 +62,21 @@ Note: You can place maximum 3 calls.
 
 Step5
 
-- Click on “SAVE” button will initialize the SaBRO Communication  provisioning.
+- Click on "Call Again" button will initialize the SaBRO Communication  provisioning.
 - After successful provision, an email will be sent to Login Email for SaBRO Login.
 
-.. image:: /sabro_communications/static/src/img/provisioning.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/provissioning.png
    :align: center
    :width: 700
 
 
 Step6
 
-- Once the provisioning is completed, user will be redirected to the App page.
 - To access the Communication HUB, user needs to have SaBRO permission.
 - Go to user > SaBRO Services > SaBRO Access > Enable SaBRO Communications to give permissions.
 - After refreshing the web page, Communications HUB icon will appear on header.
  
-.. image:: /sabro_communications/static/src/img/userPermission.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/userPermission.png
    :align: center
    :width: 700
 
@@ -87,7 +85,7 @@ Step7
 
 - Communication HUB can be opened on click call icon available on header and ready to receive and make calls.
 
-.. image:: /sabro_communications/static/src/img/CommunicationsHub.png
+.. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/communication.png
    :align: center
    :width: 700
 
