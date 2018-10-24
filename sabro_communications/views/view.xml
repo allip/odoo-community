@@ -303,9 +303,5 @@ if records:
 	        action="view_sabro_installer_action"
 	    />
 	    
-	    <menuitem id="menu_orders" name="Orders"
-        parent="website.menu_website_configuration" sequence="2"
-        groups="sales_team.group_sale_salesman"/>
-		
 	</data>
 </odoo>
