@@ -7,11 +7,6 @@ from odoo.exceptions import AccessError, MissingError, UserError, ValidationErro
 import simplejson
 
 class SabroController(http.Controller):
-    
-#     @http.route('/call/for/otp/again', auth="user" , csrf= False, methods=['GET','POST'])
-#     def callForOtpAgain(self, **kw):
-#         request.env['sabro_installer_verification'].sudo().callAgainForOTP()
-#         return 'True'
 
     @http.route(['/get/pbx/client/auth','/sabro/hub/auth'], auth="user" , csrf= False, methods=['GET','POST'])
     def getSabroHubAuth(self, **kw):

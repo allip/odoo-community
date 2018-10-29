@@ -20,6 +20,7 @@
          'data/ir_cron.xml',
          'views/view.xml',
          'views/res_users_view.xml',
+         'data/res_country_data.xml'
     ],
     'qweb': [
         'static/src/xml/communications_hub_view.xml',
