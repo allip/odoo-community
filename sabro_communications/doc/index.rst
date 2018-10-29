@@ -100,7 +100,7 @@ What will I get on Odoo?
 
 What can I do on SaBRO Cloud?
 -----------------------------------------------------------
-Advanced Communications Features (Links for SaBRO user/admin guide)
+Advanced Communications Features
 
 Enable communications for Odoo users
 -----------------------------------------------------------
@@ -126,13 +126,7 @@ Communications settings for Odoo users
 - User will be redirected to the SaBRO user page.
 - Communications setting can be managed under "communications" tab.
 
-Known Limitations
-===============================
 
-1. Communications settings are not visible or accessible directly on Odoo.
-2. 2FA, the account security feature will not work for login to SaBRO Nodes from Odoo.
-3. Module uninstallation is required if the signup gets interrupted.
-4. Users created on SaBRO will appear on Odoo for user mapping after each 24hrs.
 
 
 
