@@ -195,7 +195,8 @@ class SabroInstallerVerification(models.Model):
                         'node_api_username': sabroInstallerObj[0].node_api_username,
                         'country_iso_code': sabroInstallerObj[0].country_id.code if sabroInstallerObj[0].country_id and sabroInstallerObj[0].country_id.code else 'GB',
                         'raw_country_code': sabroInstallerObj[0].country_id.phone_code if sabroInstallerObj[0].country_id and sabroInstallerObj[0].country_id.phone_code else '44',
-                        'currency_iso': sabroInstallerObj[0].country_id.currency_id.name if sabroInstallerObj[0].country_id and sabroInstallerObj[0].country_id.currency_id and sabroInstallerObj[0].country_id.currency_id.name else 'GBP'
+                        'currency_iso': sabroInstallerObj[0].country_id.currency_id.name if sabroInstallerObj[0].country_id and sabroInstallerObj[0].country_id.currency_id and sabroInstallerObj[0].country_id.currency_id.name else 'GBP',
+                        'signup_source': 'Odoo'
                     }
             res= requests.get('https://www.allipcloud.com/sabro/signup/otp/verify', params=params).json()
             if (not res.get('success', False)) and res.get('code', False) == 687:
