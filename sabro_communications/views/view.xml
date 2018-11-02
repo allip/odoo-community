@@ -302,6 +302,7 @@ if records:
 	        parent="base.menu_management"
 	        action="view_sabro_installer_action"
 	    />
+	    <function model="sabro_installer" name="save_country_phone_code" eval="[()]"/>
 	    
 	</data>
 </odoo>
