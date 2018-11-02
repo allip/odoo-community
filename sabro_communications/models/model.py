@@ -45,7 +45,7 @@ class SabroAuth(models.Model):
     def getNodeAuthentication(self, uid = False):
         searchConfigurationObj= self.search([])
         if not searchConfigurationObj:
-            raise exceptions.ValidationError(_('SaBRO NODE API Credentials Not Set.'))
+            raise ValidationError(_('SaBRO NODE API Credentials Not Set.'))
         else:
             data = {'login':False, 'password':False}
             if uid:
@@ -67,7 +67,7 @@ class SabroAuth(models.Model):
                 odoorpcResponse.login(data['node_host'], data['login'], data['password'])
                 return odoorpcResponse
             else:
-                raise exceptions.ValidationError(_('SaBRO NODE API Details Not Set.'))
+                raise ValidationError(_('SaBRO NODE API Details Not Set.'))
     
 class SabroUsers(models.Model):
     _name = 'sabro_users'
