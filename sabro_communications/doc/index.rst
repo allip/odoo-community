@@ -1,4 +1,4 @@
-﻿Step1
+Step1
 
 menuselection:`[Odoo] --> [All Apps]`
 
@@ -51,7 +51,7 @@ Note: Review all the filled information's before verifying the Mobile/Phone numb
 
 Step4
 
-- Enter the one time password received on provided mobile via call and click on "Call Again" button.
+- Enter the one time password received on provided mobile via call and click on "Save" button.
 - In case, you do not receive any call or missed the call, you can request new OTP by clicking on "Call Again".
 
 .. image:: http://allip-website-resource.s3.amazonaws.com/github/sabro_communications/media/enterOtp.png
